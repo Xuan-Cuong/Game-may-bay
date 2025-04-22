@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Flight Sim - Three.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container cho Three.js Canvas -->
+    <div id="canvas-container"></div>
+
+    <!-- Container cho HUD -->
+    <div id="hud">
+        <div class="hud-item">Speed: <span id="speed-value">0.0</span></div>
+        <div class="hud-item">Altitude: <span id="altitude-value">0</span> m</div>
+        <div class="hud-item">Pitch: <span id="pitch-value">0</span> °</div>
+        <div class="hud-item">Roll: <span id="roll-value">0</span> °</div>
+        <div class="hud-item">Score: <span id="score-value">0</span></div>
+        <div class="hud-item controls-info">
+            Controls:<br>
+            Arrows: Pitch/Roll<br>
+            A/D: Yaw (Minor Adjust)<br>
+            W/S: Speed<br>
+            Mouse Click: Fire<br> <!-- Updated Control -->
+            <!-- Mouse Drag: (Look - not implemented) -->
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
